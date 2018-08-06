@@ -33,6 +33,7 @@ class CartInfo(models.Model):
     user = models.ForeignKey(UserModel)
     goods = models.ForeignKey(GoodsInfo)
     count = models.IntegerField()
+    good_statu = models.IntegerField()
 
     class Meta:
-        db_table = 'cart'
+        db_table = 'cartinfo'

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
     {% block title %}
     天天生鲜-商品详情
     {% endblock %}
@@ -54,14 +55,14 @@
 	</div>
 
 	<div class="goods_detail_con clearfix">
-		<div class="goods_detail_pic fl"><img src="/static/images/goods_detail.jpg"></div>
+		<div class="goods_detail_pic fl"><img src="{% static good.gpic %}"></div>
 
 		<div class="goods_detail_list fr">
 			<h3>{{ good.gtitle }}</h3>
 			<p>{{ good.jieshao }}</p>
 			<div class="prize_bar">
 				<span class="show_pirze">¥<em>{{ good.gprice }}</em></span>
-				<span class="show_unit">单  位：500g</span>
+				<span class="show_unit">单  位：{{ good.danwei }}</span>
 			</div>
 			<div class="goods_num clearfix">
 				<div class="num_name fl">数 量：</div>
@@ -107,7 +108,7 @@
 			<div class="tab_content">
 				<dl>
 					<dt>商品详情：</dt>
-					<dd>草莓采摘园位于北京大兴区 庞各庄镇四各庄村 ，每年1月-6月面向北京以及周围城市提供新鲜草莓采摘和精品礼盒装草莓，草莓品种多样丰富，个大香甜。所有草莓均严格按照有机标准培育，不使用任何化肥和农药。草莓在采摘期间免洗可以直接食用。欢迎喜欢草莓的市民前来采摘，也欢迎各大单位选购精品有机草莓礼盒，有机草莓礼盒是亲朋馈赠、福利送礼的最佳选择。 </dd>
+					<dd>{{ good.jieshao }} </dd>
 				</dl>
 			</div>
 
